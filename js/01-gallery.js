@@ -85,6 +85,9 @@ function showImage(event) {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       instance.close();
+
+      // після закриття вікна прибираємо слухача натиску кнопки
+      document.removeEventListener("keydown", event);
     }
   });
 }
